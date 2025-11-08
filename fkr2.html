@@ -1,0 +1,245 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fiker Asefa | Portfolio</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #ffb6c1, #ffd6e0);
+      color: #333;
+      overflow-x: hidden;
+    }
+    header {
+      background: rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(10px);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 60px;
+    }
+    header h1 { color: #e75480; font-size: 24px; }
+    nav a {
+      text-decoration: none;
+      margin: 0 15px;
+      color: #333;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    nav a:hover { color: #e75480; }
+
+    section {
+      min-height: 100vh;
+      padding: 100px 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    /* Home Section */
+    #home {
+      background: url('Downloads/5789798155225337014.jpg') center/cover;
+      color: white;
+      background-image: url(Downloads/5789798155225337014.jpg);
+    }
+    #home h2 { font-size: 36px; margin-bottom: 10px; }
+    #home p { font-size: 20px; max-width: 600px; }
+
+    /* About Section (Feminine Tech Background) */
+    #about {
+      position: relative;
+      background: url('Downloads/imag/f19c63506d93163febf8c921cf70898a.jpg') center/cover no-repeat;
+      border-radius: 20px;
+      margin-top: 50px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      overflow: hidden;
+      color: #fff;
+      animation: float 6s ease-in-out infinite;
+    }
+
+    #about::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(231, 84, 128, 0.4);
+      backdrop-filter: blur(2px);
+      z-index: 0;
+    }
+
+    #about h2, #about p {
+      position: relative;
+      z-index: 1;
+    }
+
+    #about h2 {
+      font-size: 30px;
+      color: #fff;
+      margin-bottom: 15px;
+    }
+
+    #about p {
+      font-size: 18px;
+      max-width: 800px;
+      line-height: 1.6;
+      color: #fff;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0px); }
+    }
+
+    /* Portfolio Section */
+    #portfolio {
+      background: #ffe4ec;
+      border-radius: 20px;
+      margin-top: 50px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+    .portfolio-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .portfolio-item {
+      width: 250px;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+      background: white;
+    }
+    .portfolio-item:hover { transform: scale(1.05); }
+    .portfolio-item img { width: 100%; height: 180px; object-fit: cover; }
+
+    /* Contact Section */
+    #contact {
+      background: #fff;
+      background: url('Downloads/imag/b8f4bee6388334fa7c95708773ef7b68 (1).jpg');
+      border-radius: 20px;
+      margin-top: 50px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      width: 100%;
+      max-width: 400px;
+    }
+    input, textarea {
+      padding: 10px;
+      border: 2px solid #e75480;
+      border-radius: 10px;
+      outline: none;
+    }
+    button {
+      background: #e75480;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover { background: #ff8fab; }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #666;
+    }
+
+    /* Scroll Animation */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.8s ease;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Fiker Asefa</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Home Section -->
+  <section id="home">
+    <h2 class="fade-in">Hi, I'm Fiker Asefa 👋</h2>
+    <p class="fade-in">A third-year Information System student at Gonder University, part-time makeup artist, and passionate about UI/UX design.</p>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="fade-in">
+    <h2>About Me</h2>
+    <p>I'm Fiker Asefa, an Information System student who loves combining technology and creativity. I design digital experiences that feel intuitive and beautiful, and outside of tech, I’m also a makeup artist and nail technician. I believe beauty and usability belong together.</p>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="fade-in">
+    <h2 style="color:#e75480;">My Work</h2>
+    <div class="portfolio-gallery">
+      <div class="portfolio-item">
+        <img src="https://st5.depositphotos.com/9999814/66248/i/450/depositphotos_662484958-stock-photo-digital-paper-wireframe-designs-web.jpg" alt="UI/UX Design workspace">
+        <p style="padding:10px; color:#e75480; font-weight:500;">UI/UX Design Project</p>
+      </div>
+      <div class="portfolio-item">
+        <img src="Downloads/imag/download.jpg" alt="Makeup Art - Black woman with glam look">
+        <p style="padding:10px; color:#e75480; font-weight:500;">Makeup Artistry</p>
+      </div>
+      <div class="portfolio-item">
+        <img src="Downloads/imag/nail.jpg" alt="Pink nails on black hand">
+        <p style="padding:10px; color:#e75480; font-weight:500;">Nail Design</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="fade-in">
+    <h2>Contact Me</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <p style="margin-top:15px;">📞 Phone: +251902394413<br>📧 Email: fiker090907@gmail.com
+  </section>
+
+  <footer>
+    <p>© 2025 Fiker Asefa. Designed with 💖 and creativity.</p>
+  </footer>
+
+  <!-- Scroll Animation Script -->
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){ entry.target.classList.add('visible'); }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
